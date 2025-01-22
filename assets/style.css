@@ -1,5 +1,5 @@
-body {
-	--base-size: 18px;
+:root {
+	--base-size: 16px;
 	--gutter-size:calc(4*var(--base-size));
 
 	--color--primary: black;
@@ -38,4 +38,12 @@ footer{
 	/* inline: both sides left and right*/
 	/* block: both sides up and down*/
 	padding-inline: var(--gutter-size); 
+}
+
+@media (min-width:600px){
+	:root{
+		--base-size: 20px;
+		--gutter-size: calc(5*var(--base-size));
+
+	}
 }
