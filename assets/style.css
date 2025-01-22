@@ -19,7 +19,7 @@ h2{
 
 header{
 	background-color: var(--color--background);
-	padding-block: calc(5*var(--base-size));
+	padding-block: calc(3*var(--base-size));
 }
 
 
