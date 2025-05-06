@@ -82,7 +82,7 @@ p{
 }
 
 #main-content{
-	block-size: 90vh;
+	block-size: 85vh;
 	padding-block: calc(1*var(--gutter-size));
 	color: var(--color--primary);
 	padding-inline: var(--gutter-size);
@@ -112,6 +112,7 @@ li:hover p{
 
 li:nth-of-type(2) .preview {
 	top: 115vh;
+	left: calc(6*var(--gutter-size));
 }
 
 li:nth-of-type(3) .preview {
@@ -120,6 +121,7 @@ li:nth-of-type(3) .preview {
 
 li:nth-of-type(4) .preview {
 	top: 125vh;
+	left: calc(6*var(--gutter-size));
 }
 
 li:nth-of-type(5) .preview {
@@ -129,7 +131,7 @@ li:nth-of-type(5) .preview {
 img, video{
 	border: 1px solid var(--color--red);
 	aspect-ratio: 16/9;
-	width: 700px;
+	width: 50vw;
 	height: auto;
 }
 
