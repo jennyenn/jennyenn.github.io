@@ -24,7 +24,6 @@
 	}
 }
 
-
 body{
 	background-color: var(--color--background);
 	color: var(--color--primary);
@@ -107,8 +106,8 @@ a{
 	gap: var(--gutter-size);
 }
 
-li:hover p{
-	color: var(--color--red);
+li a:hover p{
+	color: var(--color--red) !important;
 }
 
 .preview{

@@ -10,8 +10,9 @@ function preload(){
 }
 
 function setup(){
-    canvas = createCanvas(windowWidth, windowHeight);
-    canvas.position(0, 0);
+    canvas = createCanvas(windowWidth, windowHeight-80);
+    canvas.position(0, 50);
+    canvas.style('pointer-events', 'none');
 }
 
 function draw(){
@@ -22,7 +23,8 @@ function draw(){
 
     for (let ic of trail) {
         let alpha = map(now - ic.time, 0, 600, 255, 0);
-        tint(255, alpha); 
+        tint(255, alpha);
+        // tint: https://p5js.org/reference/p5/tint/ 
         image(icon, ic.x, ic.y, 20, 20);
     }
     noTint();
