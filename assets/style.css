@@ -81,22 +81,45 @@ p{
 	font-weight: 200;
 }
 
-ul, li p{
-	padding-block: var(--base-size);
-	color: var(--color--primary);
-	font-size: calc(2*var(--base-size));
-}
-
-a:hover p{
-	color: var(--color--red);
-}
-
 #main-content{
 	block-size: 90vh;
 	padding-block: calc(1*var(--gutter-size));
 	color: var(--color--primary);
 	padding-inline: var(--gutter-size);
 }
+
+
+ul, li p{
+	padding-block: var(--base-size);
+	color: var(--color--primary);
+	font-size: calc(2*var(--base-size));
+}
+
+a{
+	gap: var(--gutter-size);
+}
+
+li:hover p{
+	color: var(--color--red);
+}
+
+.preview{
+	display: none;
+	position: absolute;
+	left: calc(5*var(--gutter-size));
+	top: 110vh;
+}
+
+img{
+	border: 1px solid var(--color--red);
+	aspect-ratio: 16/9;
+	width: 700px;
+	height: auto;
+}
+
+li:hover .preview {
+	display: block;
+  }
 
 footer{
 	padding-block: calc(2*var(--base-size));
