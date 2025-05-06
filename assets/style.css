@@ -1,47 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Italiana&display=swap');
+
 :root {
-	--base-size: 16px;
+
+	--heading-font: "Italiana", sans-serif;
+	--text-font:  "Inter Tight", sans-serif;
+
+	--base-size: 15px;
 	--gutter-size:calc(4*var(--base-size));
+	--small-gutter-size:calc(2*var(--base-size));
 
 	--color--primary: black;
 	--color--secondary: white;
-	--color--red: #B7482B;
-	--color--background: #B7482B;
+	--color--red: #CB4A28;
+	--color--background: #F7F7F7;
 
 	font-size: var(--base-size);
 }
 
 @media (min-width:600px){
 	:root{
-		--base-size: 20px;
-		--gutter-size: calc(5*var(--base-size));
+		--base-size: 16px;
+		--gutter-size: 100px;
 	}
 }
 
+
 body{
 	background-color: var(--color--background);
-	text-align: center;
+}
+
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 27px;
+	background-color: var(--color--red);
+	padding-inline: var(--gutter-size);
+}
+
+header{
+	background-color: var(--color--red);
+	padding-top: var(--gutter-size);
+	height: 90vh;
+	padding-inline: var(--gutter-size);
 }
 
 h1{
+	font-family: var(--heading-font);
 	color: white;
-	font-size: calc(3*var(--base-size));
-	padding-bottom: calc(1.4*var(--base-size));
+	font-size: calc(7*var(--base-size));
+	padding-bottom: calc(0.5*var(--gutter-size));
+	width: 60vw;
+	line-height: 0.95;
 }
 
 h2{
+	font-family: var(--heading-font);
 	color:white;
 	font-size: calc(0.8*var(--base-size));
 }
 
-p{
-	color: white;
+h3{
+	font-family: var(--heading-font);
+	color:white;
+	font-size: 26px ;
+	/* number from Framer */
 }
 
-header{
-	background-color: var(--color--background);
-	padding-top: calc(4*var(--base-size));
-	padding-bottom: calc(2*var(--base-size));
-	padding-inline: var(--gutter-size); 
+p{
+	font-family: var(--text-font);
+	color: white;
+	font-size: var(--base-size);
+	font-weight: 200;
 }
 
 ul, li{
@@ -54,6 +84,7 @@ a:hover p{
 
 #intro{
 	font-size: var(--base-size);
+	padding-bottom: calc(1*var(--base-size));
 }
 
 #main-content{
@@ -62,7 +93,6 @@ a:hover p{
 }
 
 footer{
-	background-color: var(--color--secondary);
 	padding-block: calc(2*var(--base-size));
 	padding-inline: var(--gutter-size); 
 }
@@ -74,7 +104,6 @@ footer p{
 .gutters{
 	/* inline: both sides left and right*/
 	/* block: both sides up and down*/
-	padding-inline: var(--gutter-size); 
 	padding-block: calc(var(--gutter-size)*0.5);
 }
 
