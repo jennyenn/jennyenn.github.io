@@ -11,6 +11,7 @@
 
 	--color--primary: #383838;
 	--color--secondary: white;
+	--color--grey: #e5e5e5;
 	--color--red: #CB4A28;
 	--color--background: #F7F7F7;
 
@@ -147,12 +148,24 @@ li:hover .preview {
   }
 
 footer{
+	display: flex;
 	padding-block: calc(2*var(--base-size));
 	padding-inline: var(--gutter-size); 
+	justify-content: space-between;
+	border-top: 1px solid var(--color--grey);
 }
 
 footer p{
 	color: var(--color--red);
+	font-weight: 300;
+}
+
+footer p:nth-child(1){
+	color: var(--color--primary);
+}
+
+#githublink:hover{
+	text-decoration: underline;
 }
 
 .gutters{
@@ -161,3 +174,7 @@ footer p{
 	padding-block: calc(var(--gutter-size)*0.5);
 }
 
+#link{
+	display: flex;
+	gap: var(--base-size);
+}
