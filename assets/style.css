@@ -9,7 +9,7 @@
 	--gutter-size:calc(4*var(--base-size));
 	--small-gutter-size:calc(2*var(--base-size));
 
-	--color--primary: black;
+	--color--primary: #383838;
 	--color--secondary: white;
 	--color--red: #CB4A28;
 	--color--background: #F7F7F7;
@@ -27,6 +27,7 @@
 
 body{
 	background-color: var(--color--background);
+	color: var(--color--primary);
 }
 
 nav{
@@ -47,49 +48,54 @@ header{
 
 h1{
 	font-family: var(--heading-font);
-	color: white;
+	color: var(--color--secondary);
 	font-size: calc(7*var(--base-size));
 	padding-bottom: calc(0.5*var(--gutter-size));
 	width: 60vw;
 	line-height: 0.95;
 }
 
+#intro{
+	font-size: var(--base-size);
+	padding-bottom: calc(0.5*var(--gutter-size));
+}
+
 h2{
 	font-family: var(--heading-font);
-	color:white;
-	font-size: calc(0.8*var(--base-size));
+	color: var(--color--red);
+	font-size: calc(4*var(--base-size));
+	padding-bottom: calc(0.5*var(--gutter-size));
 }
 
 h3{
 	font-family: var(--heading-font);
-	color:white;
+	color: var(--color--secondary);
 	font-size: 26px ;
 	/* number from Framer */
 }
 
 p{
 	font-family: var(--text-font);
-	color: white;
+	color: var(--color--secondary);
 	font-size: var(--base-size);
 	font-weight: 200;
 }
 
-ul, li{
+ul, li p{
 	padding-block: var(--base-size);
+	color: var(--color--primary);
+	font-size: calc(2*var(--base-size));
 }
 
 a:hover p{
-	color: rgba(255, 255, 255, 0.387);
-}
-
-#intro{
-	font-size: var(--base-size);
-	padding-bottom: calc(1*var(--base-size));
+	color: var(--color--red);
 }
 
 #main-content{
-	block-size: 50vh;
-	padding-block: calc(1*var(--base-size));
+	block-size: 90vh;
+	padding-block: calc(1*var(--gutter-size));
+	color: var(--color--primary);
+	padding-inline: var(--gutter-size);
 }
 
 footer{
