@@ -39,6 +39,10 @@ nav{
 	padding-inline: var(--gutter-size);
 }
 
+#portfoliolink:hover{
+	text-decoration: underline;
+}
+
 header{
 	background-color: var(--color--red);
 	padding-top: var(--gutter-size);
@@ -86,6 +90,10 @@ p{
 	padding-block: calc(1*var(--gutter-size));
 	color: var(--color--primary);
 	padding-inline: var(--gutter-size);
+}
+
+#main-content p{
+	color: var(--color--primary);
 }
 
 
