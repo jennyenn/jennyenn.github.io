@@ -13,6 +13,8 @@ function setup(){
     canvas = createCanvas(windowWidth, windowHeight-80);
     canvas.position(0, 50);
     canvas.style('pointer-events', 'none');
+
+    cursor('url(assets/icon.png) 0 0, auto');
 }
 
 function draw(){
@@ -28,6 +30,7 @@ function draw(){
         image(icon, ic.x, ic.y, 20, 20);
     }
     noTint();
+    cursor('url(assets/icon.png) 0 0, auto');
 }
 
 function mouseMoved() {
