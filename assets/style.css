@@ -110,7 +110,23 @@ li:hover p{
 	top: 110vh;
 }
 
-img{
+li:nth-of-type(2) .preview {
+	top: 115vh;
+}
+
+li:nth-of-type(3) .preview {
+	top: 120vh;
+}
+
+li:nth-of-type(4) .preview {
+	top: 125vh;
+}
+
+li:nth-of-type(5) .preview {
+	top: 130vh;
+}
+
+img, video{
 	border: 1px solid var(--color--red);
 	aspect-ratio: 16/9;
 	width: 700px;
