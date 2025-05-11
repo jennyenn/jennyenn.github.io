@@ -11,28 +11,30 @@ function preload(){
 
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight-100);
-    canvas.position(0, 80);
-    canvas.style('pointer-events', 'none');
+    canvas.position(0, 0);
 
     cursor('url(assets/icon.png) 0 0, auto');
+}
+
+// https://p5js.org/reference/p5/resizeCanvas/
+// resize canvas size
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight-100);
 }
 
 function draw(){
     clear();
 
     let now = millis();
-    trail = trail.filter(ic => now - ic.time < 600);
+    // keep the trail brfore 200ms
+    trail = trail.filter(ic => now - ic.time < 200);
 
     for (let ic of trail) {
-        let alpha = map(now - ic.time, 0, 600, 255, 0);
-        tint(255, alpha);
-        // tint: https://p5js.org/reference/p5/tint/ 
         image(icon, ic.x, ic.y, 20, 20);
     }
-    noTint();
 }
 
+// update the mouse position
 function mouseMoved() {
     trail.push({ x: mouseX, y: mouseY, time: millis() });
-    cursor('url(assets/icon.png) 0 0, auto');
   }
