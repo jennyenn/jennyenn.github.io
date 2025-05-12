@@ -6,7 +6,7 @@
 	--text-font:  "Inter Tight", sans-serif;
 
 	--base-size: 15px;
-	--gutter-size:calc(2*var(--base-size));
+	--gutter-size: 24px;
 	--small-gutter-size:calc(2*var(--base-size));
 
 	--color--primary: #383838;
@@ -22,8 +22,6 @@
 	:root{
 		--base-size: 16px;
 		--gutter-size: 100px;
-
-		--gutter-size:calc(4*var(--base-size));
 	}
 }
 
@@ -41,7 +39,7 @@ nav{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding-top: 27px;
+	padding-top: 24px;
 	background-color: var(--color--red);
 	padding-inline: var(--gutter-size);
 }
@@ -52,7 +50,7 @@ nav{
 
 header{
 	background-color: var(--color--red);
-	padding-top: calc(2*var(--gutter-size));
+	padding-top: calc(4*var(--gutter-size));
 	height: 90vh;
 	padding-inline: var(--gutter-size);
 }
@@ -60,15 +58,16 @@ header{
 h1{
 	font-family: var(--heading-font);
 	color: var(--color--secondary);
-	font-size: calc(5*var(--base-size));
+	font-size: calc(4.5*var(--base-size));
 	padding-bottom: calc(0.5*var(--gutter-size));
 	width: 60vw;
-	line-height: 0.95;
+	line-height: 1.2;
 }
 
 #intro{
 	font-size: var(--base-size);
-	padding-bottom: calc(0.5*var(--gutter-size));
+	padding-bottom: var(--gutter-size);
+	padding-top: calc(4*var(--gutter-size));
 }
 
 h2{
@@ -112,6 +111,8 @@ ul, li p{
 
 a{
 	gap: var(--gutter-size);
+	display: flex;
+	align-items: center;
 }
 
 li a:hover p{
@@ -191,6 +192,7 @@ footer p:nth-child(1){
 
 	h1{
 		font-size: calc(7*var(--base-size));
+		line-height: 0.95;
 	}
 
 	header{
@@ -199,5 +201,14 @@ footer p:nth-child(1){
 
 	canvas{
 		display: block;
+	}
+
+	nav{
+		padding-top: 27px;
+	}
+
+	#intro{
+		padding-top: 0px;
+		padding-bottom: calc(0.5*var(--gutter-size));
 	}
 }
