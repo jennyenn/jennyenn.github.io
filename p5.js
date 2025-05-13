@@ -11,7 +11,7 @@ function preload(){
 
 function setup(){
     canvas = createCanvas(windowWidth, windowHeight-100);
-    canvas.position(0, 0);
+    canvas.position(0, 70);
 
     cursor('url(assets/icon.png) 0 0, auto');
 }
